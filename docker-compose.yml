@@ -7,16 +7,14 @@ services:
       context: .
       args:
         - NODE_ENV=development
-    command: npm run start:dev:docker
+    command: npm run start:dev
     ports:
       - "3000:3000"
     volumes:
-      - .:/opt/node_app/app:delegated
-      - ./package.json:/opt/node_app/package.json
-      - ./package-lock.json:/opt/node_app/package-lock.json
-      - notused:/opt/node_app/app/node_modules
+      - .:/opt/node_app/
+      - docker-node:/opt/node_app/node_modules
     environment:
       - NODE_ENV=development
 
 volumes:
-  notused:
+  docker-node:

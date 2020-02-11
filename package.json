@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start:dev:host": "nodemon index.js",
-    "start:dev:docker": "../node_modules/nodemon/bin/nodemon.js index.js"
+    "start:dev": "nodemon index.js"
   },
   "license": "ISC",
   "dependencies": {
